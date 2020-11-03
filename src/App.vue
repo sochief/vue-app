@@ -1,27 +1,21 @@
 <template>
   <div id="app">
-    <h1>{{ msg }}</h1>
-    <app-car></app-car>
+    <h1>Parent: {{ carName }}</h1>
+    <app-car :carName="carName" :carYear="carYear"></app-car>
   </div>
 </template>
 
 <script>
+import Car from "./Car.vue";
 export default {
   data() {
     return {
-      msg: "Go fuck yourself",
+      carName: "Ford",
+      carYear: 2018,
     };
+  },
+  components: {
+    appCar: Car,
   },
 };
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
