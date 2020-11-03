@@ -4,6 +4,7 @@
     <app-car
       :carName="carName"
       :carYear="carYear"
+      :changeFunc="changeNameToAudi"
       @nameChanged="carName = $event"
     ></app-car>
   </div>
@@ -17,6 +18,11 @@ export default {
       carName: "Ford",
       carYear: 2018,
     };
+  },
+  methods: {
+    changeNameToAudi() {
+      this.carName = "Audi";
+    },
   },
   components: {
     appCar: Car,
