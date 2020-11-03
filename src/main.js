@@ -8,3 +8,5 @@ new Vue({
   el: '#app',
   render: h => h(App)
 })
+
+export const eventEmitter = new Vue()
