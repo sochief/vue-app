@@ -1,20 +1,19 @@
 <template>
   <div>
-    <h2>Car</h2>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum
-      distinctio, magnam quis corporis, ea architecto sapiente, aspernatur
-      provident ipsam blanditiis temporibus excepturi itaque sint voluptatum.
-      Modi at ipsum velit architecto?
-    </p>
+    <h2>{{ carName }}</h2>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  props: ["carName"],
+};
 </script>
+
+
 <style scoped>
 div {
   border: 1px solid black;
+  padding: 10px;
 }
 </style>
