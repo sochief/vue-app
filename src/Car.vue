@@ -1,6 +1,9 @@
 <template>
   <div>
-    <h2>{{ carName }}</h2>
+    <slot name="title"></slot>
+    <hr />
+    <hr />
+    <slot name="text"></slot>
   </div>
 </template>
 
