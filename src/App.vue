@@ -1,8 +1,9 @@
 <template>
   <div>
-    <h2 v-colored:background.font="'red'">{{ title }}</h2>
-    <h2 v-colored:color.delay="'blue'">{{ title }}</h2>
-    <h2 v-font>Local font directive</h2>
+    <h2>{{ title }}</h2>
+    <h2>{{ title | lowercase }}</h2>
+    <h2>{{ title | uppercase }}</h2>
+    <h2>{{ title | uppercase | lowercase }}</h2>
   </div>
 </template>
 
@@ -14,19 +15,16 @@ export default {
       title: "Hello, Im Vue!",
     };
   },
-
-  /* eslint-disable */
-  directives: {
-    font: {
-      bind(el, bindings, vnode) {
-        el.style.fontSize = "40px";
-      },
+  filters: {
+    //we can use filters more than once
+    //register filter localy
+    //functions here
+    lowercase(value) {
+      return value.toLowerCase();
     },
   },
 };
 </script>
-  /*eslint-enable*/
-
 
 <style scoped>
 </style>
