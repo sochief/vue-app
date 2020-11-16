@@ -1,33 +1,17 @@
 <template>
   <div>
-    <h2>{{ title }}</h2>
+    <h1>List</h1>
     <input type="text" v-model="searchName" />
     <ul>
       <li v-for="name of filteredNames" v-bind:key="name.id">{{ name }}</li>
     </ul>
-    <hr />
-    <app-list></app-list>
   </div>
 </template>
-
 
 <script>
 import ListMixin from "./listMixin";
 export default {
-  data() {
-    return {
-      title: "Hello, I'm Vue!",
-    };
-  },
   mixins: [ListMixin],
-  filters: {
-    //we can use filters more than once
-    //register filter localy
-    //functions here
-    lowercase(value) {
-      return value.toLowerCase();
-    },
-  },
 };
 </script>
 
