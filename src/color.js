@@ -1,9 +1,9 @@
 /* eslint-disable */
 export default{
-    bind(el,binding,vnode){
-        console.log('bind')
+    bind(el,bindings,vnode){
+        const arg = bindings.arg
         // el.style.color = 'blue'
-        el.style.color = binding.value
+        el.style[arg] = bindings.value
     }
 }
 /* eslint-enable */
